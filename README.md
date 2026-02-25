@@ -1,6 +1,7 @@
 ## LocHawk 
 **LocHawk** is a powerful geolocation phishing tool that tricks targets into revealing their exact GPS location, device information, and network details through a seemingly harmless webpage.
 
+---
 
 ## ⚠️ DISCLAIMER
 
@@ -26,6 +27,8 @@ This tool is designed for **educational purposes, ethical hacking demonstrations
 **By downloading, installing, or using LocHawk, you agree to use it responsibly and ethically, and solely for legitimate security education purposes.**
 
 *Remember: With great power comes great responsibility.*
+
+---
 
 ##  Features
 
@@ -68,6 +71,7 @@ This tool is designed for **educational purposes, ethical hacking demonstrations
 - Choose to keep or delete collected data
 - Preview last 20 entries during monitoring
 
+---
 
 ##  Installation
 **What You Need:**
@@ -98,6 +102,8 @@ cd lochawk
 ```bash   
 bash lochawk.sh
 ```
+
+---
 
 ##  How to Use
 1. **Run the tool**:
@@ -172,6 +178,7 @@ html
 
   - Type `n` or `no` to keep the data file for later use
 
+---
 
 ## License
 This project is licensed under the MIT License.
