@@ -288,14 +288,18 @@ format_location_data() {
         "device")
             local ua=$(echo "$line" | grep -o '"ua":"[^"]*"' | cut -d'"' -f4)
             local platform=$(echo "$line" | grep -o '"pl":"[^"]*"' | cut -d'"' -f4)
+            local cookies=$(echo "$line" | grep -o '"ce":\(true\|false\)' | cut -d':' -f2)
             local language=$(echo "$line" | grep -o '"bl":"[^"]*"' | cut -d'"' -f4)
+            local browser_name=$(echo "$line" | grep -o '"bn":"[^"]*"' | cut -d'"' -f4)
+            local browser_code=$(echo "$line" | grep -o '"bc":"[^"]*"' | cut -d'"' -f4)
             local ram=$(echo "$line" | grep -o '"rm":[0-9]*' | cut -d':' -f2)
             local cores=$(echo "$line" | grep -o '"cc":[0-9]*' | cut -d':' -f2)
             local sw=$(echo "$line" | grep -o '"sw":[0-9]*' | cut -d':' -f2)
             local sh=$(echo "$line" | grep -o '"sh":[0-9]*' | cut -d':' -f2)
             local referrer=$(echo "$line" | grep -o '"rf":"[^"]*"' | cut -d'"' -f4)
+            local os_raw=$(echo "$line" | grep -o '"os":"[^"]*"' | cut -d'"' -f4)
             
-            # Detect browser
+            # Detect browser from UA
             local browser="Unknown"
             if [[ "$ua" == *"Chrome"* ]] && [[ "$ua" != *"Edg"* ]]; then
                 browser="Chrome"
@@ -307,7 +311,7 @@ format_location_data() {
                 browser="Edge"
             fi
             
-            # Detect OS
+            # Detect OS from UA
             local os="Unknown"
             if [[ "$ua" == *"Windows"* ]]; then
                 os="Windows"
@@ -321,10 +325,15 @@ format_location_data() {
                 os="Linux"
             fi
             
+            # Print ALL fields 
             echo -e "${GREEN}browser =${RESET} ${GREEN}$browser${RESET}"
+            echo -e "${GREEN}browser_name =${RESET} ${GREEN}$browser_name${RESET}"
+            echo -e "${GREEN}browser_code =${RESET} ${GREEN}$browser_code${RESET}"
             echo -e "${GREEN}os =${RESET} ${GREEN}$os${RESET}"
+            echo -e "${GREEN}os_raw =${RESET} ${GREEN}$os_raw${RESET}"
             echo -e "${GREEN}platform =${RESET} ${GREEN}$platform${RESET}"
             echo -e "${GREEN}language =${RESET} ${GREEN}$language${RESET}"
+            echo -e "${GREEN}cookies_enabled =${RESET} ${GREEN}$cookies${RESET}"
             echo -e "${GREEN}ram =${RESET} ${GREEN}${ram}GB${RESET}"
             echo -e "${GREEN}cores =${RESET} ${GREEN}$cores${RESET}"
             echo -e "${GREEN}screen =${RESET} ${GREEN}${sw}x${sh}${RESET}"
