@@ -114,15 +114,15 @@ chmod +x lochawk.sh
 
 2. **Choose a custom HTML page** – Optionally provide your own phishing page.
 
-  - Internal CSS (`<style>` tags) supported
+    - Internal CSS (`<style>` tags) supported
 
-  -  Internal JavaScript (`<script>` tags) supported
+    -  Internal JavaScript (`<script>` tags) supported
 
-  -  External CSS/JS files (links to `.css` or `.js`) are not supported
+    -  External CSS/JS files (links to `.css` or `.js`) are not supported
 
-  - Your design is preserved, tracking script is auto-injected
+    - Your design is preserved, tracking script is auto-injected
 
-  - Press Enter to use the default page
+    - Press Enter to use the default page
 
  **Example custom page:**
 ```html
