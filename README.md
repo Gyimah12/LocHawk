@@ -5,7 +5,9 @@
 
 ## ⚠️ DISCLAIMER — Legal and Ethical Use Notice
 
-This tool is provided for **educational purposes and authorized security testing only**.
+This tool is provided for **educational purposes, security research, and authorized security testing only**.
+
+**Unauthorized use is illegal and may result in criminal and civil penalties.**
 
 By downloading, installing, or using this software, you agree that:
 
