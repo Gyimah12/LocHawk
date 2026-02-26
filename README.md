@@ -3,30 +3,24 @@
 
 ---
 
-## ⚠️ DISCLAIMER
+## ⚠️ DISCLAIMER — Legal and Ethical Use Notice
 
-**This tool is for EDUCATIONAL and security research PURPOSES ONLY.**
+This tool is provided for **educational purposes and authorized security testing only**.
 
-By using LocHawk, you acknowledge and agree that:
+By downloading, installing, or using this software, you agree that:
 
-- **Unauthorized use** of this tool against any individual, organization, or system without explicit written consent is ILLEGAL.
+- You will use it **only on devices, systems, or networks you own** or have **explicit written permission** from the lawful owner to test.
+- You will comply with **all applicable local, state, national, and international laws** related to privacy, surveillance, data protection, and computer access.
+- You are **fully responsible** for how you use this tool and for any data you collect, store, or share.
+- Any attempt to access location data, devices, networks, or personal information **without authorization is illegal** and may result in criminal and civil penalties.
+- This software is provided **“as is”**, without any warranties or guarantees of any kind.
+- The developer and contributors **assume no liability** for misuse, damages, legal consequences, or losses resulting from the use of this software.
 
-- **You assume full responsibility** for complying with all applicable local, state, and federal laws regarding surveillance, privacy, and computer fraud.
+This tool is intended to help security professionals, students, and researchers **understand security risks and improve defenses** — not to track, monitor, or target individuals.
 
-- **The developer assume NO LIABILITY** for any misuse, damages, or legal consequences arising from the use of this tool.
+If you do not agree to these terms, **do not use this software**.
 
-- **Only use on:**
-  - Your own devices and networks
-  - Systems you have explicit written permission to test
-  - Authorized security assessments and penetration testing
-
-- **Unauthorized access** to computer systems, invasion of privacy, and interception of communications are serious crimes with severe penalties including fines and imprisonment.
-
-This tool is designed for **educational purposes, ethical hacking demonstrations, and security research**. It is intended to help penetration testers and security researchers understand how geolocation phishing attacks work, so they can better defend against them.
-
-**By downloading, installing, or using LocHawk, you agree to use it responsibly and ethically, and solely for legitimate security education purposes.**
-
-*Remember: With great power comes great responsibility.*
+*Use responsibly. Act ethically. Follow the law.*
 
 ---
 
