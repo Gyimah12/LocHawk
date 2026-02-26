@@ -30,9 +30,8 @@ banner() {
    | |    / _ \ / __|  __  |/ _` \ \ /\ / / |/ /
    | |___| (_) | (__| |  | | (_| |\ V  V /|   < 
    |______\___/ \___|_|  |_|\__,_| \_/\_/ |_|\_\
-                                                  
-                                                                                                                
-                                Developer : Sreeraj
+                                                                                                                                      
+                             Developer : Sreeraj
 
 EOF
  echo -e "${GREEN}* GitHub: https://github.com/s-r-e-e-r-a-j\n${RESET}"
