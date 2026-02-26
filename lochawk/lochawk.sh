@@ -97,6 +97,15 @@ install_dependencies() {
     echo -e "${GREEN}[+] All dependencies are installed!${RESET}"
 }
 
+create_needed_files() {
+      touch server.log 2>/dev/null
+      touch cloudflared.txt 2>/dev/null
+      touch serveo.txt 2>/dev/null
+      # Ensure data.txt exists and has proper permissions
+      touch "${DATA_FILE}" 2>/dev/null
+      chmod 644 "${DATA_FILE}" 2>/dev/null
+}
+
 # Kill Any Existing Server on Port 3000
 kill_old_server() {
     OLD_PID=$(lsof -ti :$SERVER_PORT)
@@ -156,10 +165,7 @@ set_permissions() {
         # Final fallback if still not writable
         [[ -w "$MAIN_DIR" ]] || chmod -R 777 "$MAIN_DIR" 2>/dev/null
     fi
-    
-    # Ensure data.txt exists and has proper permissions
-    touch "${DATA_FILE}" 2>/dev/null
-    chmod 644 "${DATA_FILE}" 2>/dev/null
+
 }
 
 # Start the Node.js Server
@@ -450,6 +456,7 @@ trap stop_server SIGINT SIGTERM
 # Run the script
 banner
 install_dependencies
+create_needed_files
 banner
 kill_old_server
 select_html_file
