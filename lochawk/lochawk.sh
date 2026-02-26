@@ -129,25 +129,32 @@ select_html_file() {
 set_permissions() {
     # Get absolute path of the script
     SCRIPT_PATH="$(readlink -f "$0")"
-    
+   
     # Go one level up from script directory to get the main LocHawk directory
     SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
     MAIN_DIR="$(dirname "$SCRIPT_DIR")"
-    
+
     # Get current user, directory owner and group
     CURRENT_USER="$(whoami)"
     DIR_OWNER="$(stat -c '%U' "$MAIN_DIR" 2>/dev/null || echo "")"
     DIR_GROUP="$(stat -c '%G' "$MAIN_DIR" 2>/dev/null || echo "")"
-    
-    # Get current permissions of LocHawk directory
-    PERMS=$(stat -c "%a" "$MAIN_DIR" 2>/dev/null || echo "")
-    
-    # Check if current user is not owner and not in the directory's group
-    if [[ -n "$DIR_OWNER" && -n "$DIR_GROUP" && "$CURRENT_USER" != "$DIR_OWNER" ]] && ! id -nG "$CURRENT_USER" 2>/dev/null | grep -qw "$DIR_GROUP"; then
-        # Only change permission if it's not already 777
-        if [[ "$PERMS" != "777" ]]; then
-            chmod -R 777 "$MAIN_DIR" 2>/dev/null
+
+    # If user is not owner and not in group OR cannot write -> fix access
+    if [[ ! -w "$MAIN_DIR" ]] || ([[ -n "$DIR_OWNER" && -n "$DIR_GROUP" && "$CURRENT_USER" != "$DIR_OWNER" ]] && ! id -nG "$CURRENT_USER" 2>/dev/null | grep -qw "$DIR_GROUP"); then
+
+        if [[ "$EUID" -eq 0 ]]; then
+            # Running as root -> restore ownership to the original user
+            TARGET_USER="${SUDO_USER:-$(logname 2>/dev/null || echo root)}"
+            chown -R "$TARGET_USER":"$TARGET_USER" "$MAIN_DIR" 2>/dev/null
+            chmod -R u+rwx "$MAIN_DIR" 2>/dev/null
+
+        else
+            # Running as normal user -> grant access safely
+            chmod -R u+rwX "$MAIN_DIR" 2>/dev/null
         fi
+
+        # Final fallback if still not writable
+        [[ -w "$MAIN_DIR" ]] || chmod -R 777 "$MAIN_DIR" 2>/dev/null
     fi
     
     # Ensure data.txt exists and has proper permissions
