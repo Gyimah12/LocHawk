@@ -32,17 +32,6 @@ app.post('/transmit', async (req, res) => {
     }
 });
 
-app.get('/logs', async (req, res) => {
-    try {
-        const content = await fs.readFile(DATA_FILE, 'utf8');
-        const lines = content.trim().split('\n').filter(l => l);
-        const logs = lines.map(l => JSON.parse(l));
-        res.json(logs);
-    } catch (error) {
-        res.json([]);
-    }
-});
-
 app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });
