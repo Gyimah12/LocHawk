@@ -1,4 +1,4 @@
-## LocHawk 
+# LocHawk 
 **LocHawk** is a powerful geolocation phishing tool that tricks targets into revealing their exact GPS location, device information, and network details through a seemingly harmless webpage.
 
 ---
