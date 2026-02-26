@@ -67,6 +67,12 @@ If you do not agree to these terms, **do not use this software**.
 - Choose to keep or delete collected data
 - Preview last 20 entries during monitoring
 
+### **Automatic Setup**
+- Automatically checks what’s needed to run
+- Installs anything missing for you
+- Runs once, no extra steps later
+- Just start and it works
+
 ---
 
 ##  Installation
