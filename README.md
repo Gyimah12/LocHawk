@@ -16,7 +16,7 @@ By downloading, installing, or using this software, you agree that:
 - You are **fully responsible** for how you use this tool and for any data you collect, store, or share.
 - Any attempt to access location data, devices, networks, or personal information **without authorization is illegal** and may result in criminal and civil penalties.
 - This software is provided **“as is”**, without any warranties or guarantees of any kind.
-- The developer **assume no liability** for misuse, damages, legal consequences, or losses resulting from the use of this software.
+- The developer **assumes no liability** for misuse, damages, legal consequences, or losses resulting from the use of this software.
 
 This tool is intended to help security professionals, students, and researchers **understand security risks and improve defenses** — not to track, monitor, or target individuals.
 
