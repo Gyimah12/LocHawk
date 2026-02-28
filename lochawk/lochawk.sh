@@ -278,7 +278,7 @@ format_location_data() {
     
     # Extract basic info
     local ts=$(echo "$line" | grep -o '"ts":"[^"]*"' | cut -d'"' -f4)
-    local ip=$(echo "$line" | grep -o '"ip":"[^"]*"' | cut -d'"' -f4)
+    local ip=$(echo "$line" | grep -o '"ip":"[^"]*"' | grep -v '"ip":""' | head -n1 | cut -d'"' -f4)
     local type=$(echo "$line" | grep -o '"type":"[^"]*"' | cut -d'"' -f4)
     
     # Format timestamp
@@ -400,7 +400,7 @@ format_location_data() {
             ;;
             
         "ip")
-            local ip_addr=$(echo "$line" | grep -o '"ip":"[^"]*"' | cut -d'"' -f4)
+            local ip_addr=$(echo "$line" | grep -o '"ip":"[^"]*"' | grep -v '"ip":""' | head -n1 | cut -d'"' -f4)
             echo -e "${GREEN}public_ip =${RESET} ${GREEN}$ip_addr${RESET}"
             ;;
             
