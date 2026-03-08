@@ -3,6 +3,16 @@
 
 ---
 
+## Security Research & Educational Purpose
+
+LocHawk is developed for **security research, penetration testing, and educational purposes**. The tool demonstrates how social engineering and browser APIs can be used to obtain sensitive information such as **GPS location** (via the Geolocation API), **device details** (via browser APIs), and **network information** (via public APIs).
+
+The purpose of this project is to help **cybersecurity students, researchers, and developers** understand how geolocation phishing attacks work in real-world scenarios. By studying these techniques, security professionals can design stronger defenses, improve user awareness, and build systems that better protect user privacy.
+
+This project aims to promote **responsible security research and awareness** about the risks associated with granting location **permissions** on websites.
+
+---
+
 ## ⚠️ DISCLAIMER — Legal and Ethical Use Notice
 
 This tool is provided for **educational purposes, security research, and authorized security testing only**.
